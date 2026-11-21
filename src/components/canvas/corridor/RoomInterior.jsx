@@ -20,10 +20,10 @@ const ROOM_CONFIG = {
 };
 
 const SUBTITLES = {
-    'THE GALLERY': 'Explore my creative projects',
-    'THE STUDIO': 'Watch behind the scenes',
-    'DEV DIARY': 'My development journey',
-    "LET'S CONNECT": 'Get in touch with me'
+    'THE GALLERY': 'Tattoo flash & custom works',
+    'THE STUDIO': 'Inside the tattoo studio',
+    'THE ABOUT': 'Meet Christian - Bolly Ink',
+    "LET'S CONNECT": 'Book your session'
 };
 
 // Naturalny kafelek listwy: 1582x94px przy wysokości 0.15 → ~2.524 units szerokości

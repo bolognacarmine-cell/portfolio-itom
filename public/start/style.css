@@ -190,8 +190,8 @@ footer { display: flex; justify-content: center; align-items: center; margin-top
   main { padding-block: 34px 27px; }
   .primary { gap: 25px; }
   .work-link { font-size: clamp(66px, 20.5vw, 100px); padding-bottom: 10px; padding-top: 0; line-height: .99; }
-  .portfolio-link .work-label { white-space: normal; }
-  .portfolio-link .work-label > .word { display: block; margin-bottom: .035em; }
+  .studio-link .work-label { white-space: normal; }
+  .studio-link .work-label > .word { display: block; margin-bottom: .035em; }
   .last-word { gap: .23em; }
   .press-arrow { width: .56em; height: .56em; }
   .sketchbook-link { font-size: clamp(45px, 13.6vw, 75px); align-self: flex-end; padding-top: 12px; }

@@ -142,7 +142,7 @@ const Preloader = ({ onComplete, ready }) => {
 
   const { play } = useAudio();
   // Track audio handle to stop loop
-  const pencilSoundRef = useRef(null);
+  const sketchSoundRef = useRef(null);
 
   // Performance Tracking
   const loadStartTime = useRef(performance.now());
@@ -224,12 +224,12 @@ const Preloader = ({ onComplete, ready }) => {
   // Handle Pencil Sound & Exit checking dynamically
   const checkProgressTriggers = (val) => {
     // Pencil Sound
-    if (val < 99 && !pencilSoundRef.current) {
-      pencilSoundRef.current = play('pencil', { loop: true, volume: 0.5 });
+    if (val < 99 && !sketchSoundRef.current) {
+      sketchSoundRef.current = play('pencil', { loop: true, volume: 0.5 });
     }
-    else if (val >= 99 && pencilSoundRef.current) {
-      pencilSoundRef.current.stop();
-      pencilSoundRef.current = null;
+    else if (val >= 99 && sketchSoundRef.current) {
+      sketchSoundRef.current.stop();
+      sketchSoundRef.current = null;
     }
 
     // Exit phase
@@ -241,9 +241,9 @@ const Preloader = ({ onComplete, ready }) => {
 
   useEffect(() => {
     return () => {
-      if (pencilSoundRef.current) {
-        pencilSoundRef.current.stop();
-        pencilSoundRef.current = null;
+      if (sketchSoundRef.current) {
+        sketchSoundRef.current.stop();
+        sketchSoundRef.current = null;
       }
     };
   }, []);
@@ -304,9 +304,9 @@ const Preloader = ({ onComplete, ready }) => {
   const startExit = () => {
     exitStarted.current = true;
 
-    if (pencilSoundRef.current) {
-      pencilSoundRef.current.stop();
-      pencilSoundRef.current = null;
+    if (sketchSoundRef.current) {
+      sketchSoundRef.current.stop();
+      sketchSoundRef.current = null;
     }
     play('tear', { volume: 0.8 });
 
@@ -316,7 +316,7 @@ const Preloader = ({ onComplete, ready }) => {
         
         const exitEnd = performance.now();
         const totalDuration = ((exitEnd - loadStartTime.current) / 1000).toFixed(2);
-        // console.group("⏱️ Portfolio Loading Performance");
+        // console.group("⏱️ Bolly Ink Loading Performance");
         // console.log(`- Start: %c${loadStartTime.current.toFixed(0)}ms`, "color: #888");
         // console.log(`- Total Duration: %c${totalDuration}s`, "color: #00ff00; font-weight: bold;");
         // console.groupEnd();

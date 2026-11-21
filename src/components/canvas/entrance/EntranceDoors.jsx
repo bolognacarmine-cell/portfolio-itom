@@ -77,7 +77,6 @@ const EntranceDoors = ({
     const windowSketchTexture = useTexture('/textures/entrance/window_sketch.webp');
     const avatarWindowTexture = useTexture('/textures/entrance/avatar_window.webp');
     const treeTexture = useTexture('/textures/entrance/tree_sketch.webp');
-    const mouseTexture = useTexture('/textures/entrance/mouse_hanging.webp');
     const potTexture = useTexture('/textures/entrance/pot_with_duck.webp');
     const bugTexture = useTexture('/textures/entrance/bug_sketch.webp');
     const inkSplashTexture = useTexture('/images/ink-splash.webp');
@@ -92,7 +91,7 @@ const EntranceDoors = ({
     // Bug Click Animation State
     const [isBugClicked, setIsBugClicked] = useState(false);
     const [textVisible, setTextVisible] = useState(false);
-    const [clipProgress, setClipProgress] = useState(0); // 0-1 for pencil drawing reveal
+    const [clipProgress, setClipProgress] = useState(0); // 0-1 for sketch drawing reveal
     const inkSplashRef = useRef();
     const handleHideDelayRef = useRef(); // Track pending gsap.delayedCall for handle visibility
     const bugFixedTextRef = useRef();
@@ -103,18 +102,18 @@ const EntranceDoors = ({
     const [duckQuote, setDuckQuote] = useState('');
     const speechBubbleRef = useRef();
 
-    // Rubber Duck Debugging Quotes
+    // Tattoo Studio Quotes
     const duckQuotes = [
-        "Have you tried console.log()?",
-        "Did you clear the cache?",
-        "It works on my machine! 🤷",
-        "Have you turned it off and on again?",
-        "Maybe it's a CSS issue?",
-        "Check for missing semicolons!",
-        "Did you read the error message?",
-        "Have you tried Stack Overflow?",
-        "Is it plugged in?",
-        "Works in production! 🚀",
+        "Good tattoos aren't cheap, cheap tattoos aren't good.",
+        "Your body is your canvas.",
+        "Ink is forever, choose wisely.",
+        "Trust the process, love the result.",
+        "Every tattoo tells a story.",
+        "Bold lines, bold choices.",
+        "Art you can wear for life.",
+        "Breathe in, breathe out, stay still.",
+        "Custom designs, personal stories.",
+        "Welcome to Bolly Ink.",
     ];
 
     // Bug Click Handler
@@ -298,7 +297,7 @@ const EntranceDoors = ({
             ease: 'power2.out'
         }, 0.1);
 
-        // Camera flies through - STOP CLOSER to avatar/ITOM
+        // Camera flies through - STOP CLOSER to avatar/Bolly
         tl.to(camera.position, {
             z: 11,  // Closer stop point (was 11)
             y: 0.2, // Match hook's base Y position
@@ -489,15 +488,7 @@ const EntranceDoors = ({
     });
 
     // --- Mouse Swinging Animation ---
-    const mousePivotRef = useRef();
     useFrame(({ clock }) => {
-        if (mousePivotRef.current) {
-            // Gentle swing: sin wave
-            // Amplitude: 0.05 radians (approx 3 degrees)
-            // Speed: 1.5
-            mousePivotRef.current.rotation.x = Math.sin(clock.elapsedTime * 1.5) * 0.05;
-        }
-
         // --- Bug Animation ---
         if (bugRef.current) {
             const time = clock.elapsedTime;
@@ -927,7 +918,7 @@ const EntranceDoors = ({
                 />
             </mesh>
 
-            {/* BUG FIXED! Text - always mounted to preload font */}
+            {/* INKED! Text - always mounted to preload font */}
             <Text
                 ref={bugFixedTextRef}
                 position={[2.5, floorY + 2.8, 0.35]} // Default pos, updated on click
@@ -940,7 +931,7 @@ const EntranceDoors = ({
                 outlineColor="#ffffff"
                 clipRect={[-1, -0.5, -1 + (clipProgress * 2.5), 0.5]}
             >
-                BUG FIXED!
+                INKED!
             </Text>
 
 
@@ -959,24 +950,7 @@ const EntranceDoors = ({
                         depthWrite={false}
                     />
                 </mesh>
-                {/* Mouse Hanging - Pivot Group for swinging */}
-                {/* Pivot is moved UP by ~2.0 to be near the top of the string/branch */}
-                {/* Original Mesh Y was 0.02. New Pivot Y is 0.02 + 2.0 = 2.02 */}
-                {/* Mouse Hanging - Pivot Group for swinging */}
-                {/* Pivot: 421, 597px. Offset relative to center: X=0.351, Y=-0.456 */}
-                {/* Group Position shift: (-0.01, 0.02) + (0.351, -0.456) = (0.341, -0.436) */}
-                <group ref={mousePivotRef} position={[0.341, 0.02 - 0.456, 0]}>
-                    {/* Mesh moves opposite to pivot offset to keep visual position */}
-                    <mesh position={[-0.351, 0.456, 0]}>
-                        <planeGeometry args={[6, 8]} />
-                        <meshBasicMaterial color="#e0e0e0"
-                            map={mouseTexture}
-                            transparent={true}
-                            alphaTest={0.01}
-                            depthWrite={false}
-                        />
-                    </mesh>
-                </group>
+
             </group>
 
             {/* CAT SKETCH (Front Facing) */}

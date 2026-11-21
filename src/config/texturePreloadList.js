@@ -26,7 +26,6 @@ export const ENTRANCE_TEXTURES = [
     '/textures/entrance/window_sketch.webp',
     '/textures/entrance/avatar_window.webp',
     '/textures/entrance/tree_sketch.webp',
-    '/textures/entrance/mouse_hanging.webp',
     '/textures/entrance/pot_with_duck.webp',
     '/textures/entrance/bug_sketch.webp',
     '/textures/entrance/speech_bubble.webp',
@@ -65,12 +64,9 @@ export const CORRIDOR_TEXTURES = [
     // Signs
     '/textures/corridor/pustatabliczka.webp',
     // Decorations
-    '/textures/corridor/decorations/while_true_loop.webp',
-    '/textures/corridor/decorations/coffee_debug.webp',
-    '/textures/corridor/decorations/idea_process.webp',
     '/textures/corridor/decorations/paper_ball.webp',
     '/textures/corridor/decorations/paper_airplane.webp',
-    '/textures/corridor/decorations/pencil.webp',
+    '/textures/corridor/decorations/tattoo_machine.webp',
     '/textures/corridor/decorations/coffee_cup.webp',
     // CorridorDecorations - frames, furniture, lamps
     '/textures/corridor/ramkanazdjecieduza.webp',

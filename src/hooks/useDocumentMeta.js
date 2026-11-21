@@ -12,28 +12,28 @@ import { useScene } from '../context/SceneContext';
 const ROOM_META = {
     null: {
         path: '/',
-        title: 'ITom — Creative 3D Portfolio',
-        description: 'Interactive 3D developer portfolio by Tomasz "ITom" Szmajda. Explore WebGL experiments, React projects & GSAP animations in a hand-drawn gallery.',
+        title: 'Bolly Ink — Tattoo Studio',
+        description: 'Immersive tattoo experience — blackwork, realism, ornamental, lettering, cover-up styles. Meet Christian, the artist behind Bolly Ink.',
     },
     about: {
         path: '/about',
-        title: 'About Me — ITom Portfolio',
-        description: 'Learn about Tomasz "ITom" Szmajda — a creative frontend developer specializing in 3D web experiences, React, Three.js, and GSAP animations.',
+        title: 'About — Bolly Ink',
+        description: 'Christian — lead artist at Bolly Ink. Specializing in blackwork & realism since 2015. Every tattoo tells a personal story. Hygiene, precision, custom design.',
     },
     gallery: {
         path: '/gallery',
-        title: 'Gallery & Projects — ITom Portfolio',
-        description: 'Browse the interactive 3D gallery of web development projects by ITom. Each project is displayed as a hand-drawn card you can flip and explore.',
+        title: 'Gallery — Bolly Ink',
+        description: 'Tattoo flash collection: Blackwork, Realism, Ornamental, Lettering, Cover-up. Custom pieces for personal stories. Browse the styles and find inspiration.',
     },
     studio: {
         path: '/studio',
-        title: 'The Studio — ITom Portfolio',
-        description: 'Explore ITom\'s content studio — YouTube videos, blog posts, and TikToks displayed on floating monitors in an immersive 3D space.',
+        title: 'Studio — Bolly Ink',
+        description: 'The workshop where ink meets skin. Floating monitors display tattoo styles, aftercare guides, artist spotlights, and client testimonials. An immersive 3D space.',
     },
     contact: {
         path: '/contact',
-        title: 'Contact — ITom Portfolio',
-        description: 'Get in touch with Tomasz "ITom" Szmajda. Find social media links and contact information in this interactive 3D contact room.',
+        title: 'Contact — Bolly Ink',
+        description: 'Get in touch with Bolly Ink. Find social media links and book a consultation. Christian is available for custom pieces and cover-ups.',
     },
 };
 
@@ -82,12 +82,12 @@ export function useDocumentMeta() {
         if (ogDesc) ogDesc.setAttribute('content', meta.description);
 
         const ogUrl = document.querySelector('meta[property="og:url"]');
-        if (ogUrl) ogUrl.setAttribute('content', `https://itomdev.com${meta.path}`);
+        if (ogUrl) ogUrl.setAttribute('content', `https://bolly-ink-studio.com${meta.path}`);
 
         // Update canonical link to ensure virtual routes are correctly indexable as separate pages
         const canonicalTag = document.querySelector('link[rel="canonical"]');
         if (canonicalTag) {
-            canonicalTag.setAttribute('href', `https://itomdev.com${meta.path}`);
+            canonicalTag.setAttribute('href', `https://bolly-ink-studio.com${meta.path}`);
         }
 
         // Push to browser history (only if not handling a popstate event and room actually changed)

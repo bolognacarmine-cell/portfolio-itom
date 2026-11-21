@@ -153,9 +153,9 @@ const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || '';
 // Only these domains are allowed to submit the form.
 // Anyone cloning the repo and running on localhost will be silently blocked.
 const ALLOWED_ORIGINS = [
-    'itomdev.com',
-    'www.itomdev.com',
-    'portfolio-itom.pages.dev',
+    'bolly-ink-studio.com',
+    'www.bolly-ink-studio.com',
+    'localhost:5174',
 ];
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -265,7 +265,7 @@ const analyzeContentAI = (text, isSubject = false) => {
 // Not bulletproof (localStorage can be cleared), but stops 95% of casual spam.
 // ═══════════════════════════════════════════════════════════════════════
 const RATE_LIMIT_MINUTES = 30;
-const RATE_LIMIT_KEY = 'portfolio_contact_rl';
+const RATE_LIMIT_KEY = 'bollyink_contact_rl';
 
 const checkRateLimit = () => {
     try {
@@ -454,7 +454,7 @@ const MessagePaper = ({ position = [0, 0.05, 2], onSend }) => {
                 },
                 body: JSON.stringify({
                     access_key: WEB3FORMS_KEY,
-                    from_name: 'Portfolio Contact',
+                    from_name: 'Bolly Ink Contact',
                     email: email,
                     subject: subject,
                     message: message

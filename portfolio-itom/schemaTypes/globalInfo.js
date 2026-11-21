@@ -7,7 +7,7 @@ export default {
       name: 'siteTitle',
       title: 'Site Title (Meta Title)',
       type: 'string',
-      description: 'The title of your website for search engines (e.g. ITom - Creative Developer)',
+      description: 'The title of your website for search engines (e.g. Bolly Ink - Tattoo Studio)',
       validation: (Rule) => Rule.required(),
     },
     {
@@ -21,7 +21,7 @@ export default {
       name: 'aboutMe',
       title: 'About Me (SEO Text)',
       type: 'text',
-      description: 'A detailed text about who you are, what you do. This will be injected into the hidden HTML for Google to read.',
+      description: 'A detailed text about Christian, Bolly Ink, and professional tattoo art.',
     },
     {
       name: 'githubUrl',

@@ -18,19 +18,19 @@ const ScreenReaderOverlay = () => {
     const awards = useAwards();
 
     return (
-        <div className="sr-overlay" role="complementary" aria-label="Accessible navigation for 3D portfolio">
+        <div className="sr-overlay" role="complementary" aria-label="Accessible navigation for Bolly Ink tattoo studio">
             {/* Skip to content link */}
             <a href="#sr-main-nav" className="sr-only sr-focusable">
                 Skip to accessible navigation
             </a>
 
             {/* Main accessible navigation */}
-            <nav id="sr-main-nav" className="sr-only" aria-label="Portfolio rooms">
-                <h1>ITom — Creative Developer Portfolio</h1>
-                <h2>Portfolio Navigation</h2>
+            <nav id="sr-main-nav" className="sr-only" aria-label="Studio rooms">
+                <h1>Bolly Ink — Tattoo Studio</h1>
+                <h2>Bolly Ink Navigation</h2>
 
                 {!hasEntered && (
-                    <p>Welcome to ITom's interactive 3D portfolio. Click or press Enter on the doors to enter.</p>
+                    <p>Benvenuti nell'esperienza tattile Bolly Ink. Premete Invio o cliccate sulle porte per entrare.</p>
                 )}
 
                 {hasEntered && !isInRoom && (
@@ -100,7 +100,7 @@ const ScreenReaderOverlay = () => {
                         {currentRoom === 'gallery' && (
                             <div aria-label="Gallery room content">
                                 <h3>My Projects</h3>
-                                <p>Browse through my portfolio projects displayed on paper cards. Click on a project card to see details and visit the live site.</p>
+                                <p>Browse through tattoo works displayed on paper cards. Click on a card to see details.</p>
                                 
                                 {projects && projects.length > 0 && (
                                     <ul>

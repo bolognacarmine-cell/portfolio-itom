@@ -145,14 +145,14 @@ const SketchDecorations = ({ corridorWidth, corridorHeight, length, zOffset }) =
                 </group>
             ))}
 
-            {/* Random sketch marks on walls - like pencil marks */}
+            {/* Random sketch marks on walls - like sketch marks */}
             <SketchMarks corridorWidth={corridorWidth} zOffset={zOffset} length={length} />
         </group>
     );
 };
 
 /**
- * Random pencil-like marks on walls
+ * Random sketch-like marks on walls
  */
 const SketchMarks = ({ corridorWidth, zOffset, length }) => {
     const marks = useMemo(() => {

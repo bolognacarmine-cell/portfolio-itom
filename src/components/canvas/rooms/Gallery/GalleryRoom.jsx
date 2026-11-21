@@ -33,43 +33,97 @@ export const GALLERY_INTERACTION_AUDIO_SETTINGS = {
     rolloff: 2        // How fast the sound fades away (exponential)
 };
 
-// Define the unique projects and their textures
+// Define the unique projects and their textures - ALL TATTOO FLASH
 const FALLBACK_PROJECTS = [
     {
-        id: 'monetune',
-        title: 'MONETUNE',
-        front: '/textures/gallery/monetuneprzod.webp',
-        painted: '/textures/gallery/monetuneprzod_painted.webp',
-        url: 'https://monetune.pl',
-        description: 'MoneTune is a step-by-step blueprint that teaches beginners how to generate passive income using AI-created music. Without any musical skills, you will learn how to easily produce professional tracks, publish them on platforms like Spotify, and monetize your digital assets.',
-        techStack: ['/textures/gallery/wordpresslogo.webp', '/textures/gallery/elementorlogo.webp', '/textures/gallery/phplogo.webp', '/textures/gallery/csslogo.webp']
+        id: 'rose-dagger',
+        title: 'ROSE & DAGGER',
+        front: '/textures/gallery/tattoo_flash_01_rose_dagger.webp',
+        painted: '/textures/gallery/tattoo_flash_01_rose_dagger_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Classic rose and dagger flash — bold lines, timeless symbolism, and strong contrast for a traditional statement piece.',
+        techStack: []
     },
     {
-        id: 'timber',
-        title: 'TIMBERKITTY',
-        front: '/textures/gallery/timberkittyprzod.webp',
-        painted: '/textures/gallery/timberkittyprzod_painted.webp',
-        url: 'https://timberkitty.netlify.app',
-        description: 'TimberKitty is an addictive, free-to-play browser arcade game built in pure JavaScript. Players control a lumberjack cat to chop wood, save birds, complete daily missions, and compete on global leaderboards.',
-        techStack: ['/textures/gallery/jslogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp', '/textures/gallery/firebaselogo.webp']
+        id: 'swallow',
+        title: 'SWALLOW',
+        front: '/textures/gallery/tattoo_flash_02_swallow.webp',
+        painted: '/textures/gallery/tattoo_flash_02_swallow_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Traditional swallow flash inspired by old-school tattoo heritage, freedom, travel, and safe return.',
+        techStack: []
     },
     {
-        id: 'young',
-        title: 'YOUNG MULTI',
-        front: '/textures/gallery/youngmultiprzod.webp',
-        painted: '/textures/gallery/youngmultiprzod_painted.webp',
-        url: 'https://young-multi-strona.netlify.app',
-        description: 'A sleek, modern concept website dedicated to the Polish rapper and creator Young Multi. It serves as a promotional landing page designed to highlight his personal brand, music, and online presence.',
-        techStack: ['/textures/gallery/reactlogo.webp', '/textures/gallery/tailwindlogo.webp', '/textures/gallery/htmllogo.webp', '/textures/gallery/netlifylogo.webp']
+        id: 'skull-snake',
+        title: 'SKULL & SNAKE',
+        front: '/textures/gallery/tattoo_flash_03_skull_snake.webp',
+        painted: '/textures/gallery/tattoo_flash_03_skull_snake_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Dark traditional composition with skull and snake motifs, mixing danger, rebirth, and heavy blackwork attitude.',
+        techStack: []
     },
     {
-        id: 'bio',
-        title: 'BIO',
-        front: '/textures/gallery/bioprzod.webp',
-        painted: '/textures/gallery/bioprzod_painted.webp',
-        url: 'https://tomkingbio.netlify.app',
-        description: 'A fast, modern personal bio page serving as a central hub for my digital footprint. It showcases my latest coding projects, web development services, YouTube videos, and recommended music artists.',
-        techStack: ['/textures/gallery/htmllogo.webp', '/textures/gallery/csslogo.webp', '/textures/gallery/jslogo.webp', '/textures/gallery/netlifylogo.webp']
+        id: 'koi',
+        title: 'KOI FISH',
+        front: '/textures/gallery/tattoo_flash_04_koi.webp',
+        painted: '/textures/gallery/tattoo_flash_04_koi_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Japanese-inspired koi flash with flowing movement and vibrant color, symbolizing perseverance and strength.',
+        techStack: []
+    },
+    {
+        id: 'sacred-heart',
+        title: 'SACRED HEART',
+        front: '/textures/gallery/tattoo_flash_05_sacred_heart.webp',
+        painted: '/textures/gallery/tattoo_flash_05_sacred_heart_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Sacred heart flash with flames, rays, and ornamental detail — devotion, passion, and classic tattoo iconography.',
+        techStack: []
+    },
+    {
+        id: 'panther',
+        title: 'PANTHER',
+        front: '/textures/gallery/tattoo_flash_06_panther.webp',
+        painted: '/textures/gallery/tattoo_flash_06_panther_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Bold panther head flash with fierce expression and saturated color, built for impact and old-school energy.',
+        techStack: []
+    },
+    {
+        id: 'anchor',
+        title: 'ANCHOR',
+        front: '/textures/gallery/tattoo_flash_07_anchor.webp',
+        painted: '/textures/gallery/tattoo_flash_07_anchor_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Anchor and rope flash with “Hold Fast” banner — stability, grit, and nautical traditional tattoo style.',
+        techStack: []
+    },
+    {
+        id: 'moth',
+        title: 'MOTH',
+        front: '/textures/gallery/tattoo_flash_08_moth.webp',
+        painted: '/textures/gallery/tattoo_flash_08_moth_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Symmetrical moth flash with ornamental wings and rich color, blending mystery, transformation, and decorative detail.',
+        techStack: []
+    },
+    {
+        id: 'mandala',
+        title: 'MANDALA',
+        front: '/textures/gallery/tattoo_flash_09_mandala.webp',
+        painted: '/textures/gallery/tattoo_flash_09_mandala_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Ornamental mandala flash focused on balance, geometry, and intricate linework for a refined decorative tattoo.',
+        techStack: []
+    },
+    {
+        id: 'tiger',
+        title: 'TIGER',
+        front: '/textures/gallery/tattoo_flash_10_tiger.webp',
+        painted: '/textures/gallery/tattoo_flash_10_tiger_painted.webp',
+        url: 'https://www.instagram.com/bolly_ink_/',
+        description: 'Powerful tiger flash with sharp stripes and intense expression — courage, protection, and classic bold character.',
+        techStack: []
     },
 ];
 
@@ -210,7 +264,19 @@ const GalleryRoom = ({ showRoom, onReady, isExiting, isWarmup }) => {
 
     // Pobieranie danych z Sanity.io (fallback do starych danych)
     const sanityProjects = useGalleryProjects();
-    const activeProjects = sanityProjects || FALLBACK_PROJECTS;
+    const activeProjects = (sanityProjects && sanityProjects.length > 0 ? sanityProjects : FALLBACK_PROJECTS)
+        .map((p, i) => {
+            const fallback = FALLBACK_PROJECTS[i % FALLBACK_PROJECTS.length];
+            const front = p?.front || fallback.front;
+            const painted = p?.painted || p?.front || fallback.painted || front;
+            return {
+                ...fallback,
+                ...p,
+                front,
+                painted,
+                techStack: Array.isArray(p?.techStack) ? p.techStack : [],
+            };
+        });
 
     useEffect(() => {
         const mq = window.matchMedia('(hover: hover)');

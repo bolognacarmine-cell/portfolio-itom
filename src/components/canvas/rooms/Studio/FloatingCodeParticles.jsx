@@ -17,40 +17,39 @@ const LOOP_BOTTOM = -15;
 const LOOP_TOP = 15;
 const LOOP_HEIGHT = LOOP_TOP - LOOP_BOTTOM;
 
-// Symbol definitions with their visual weight
+// Symbol definitions with their visual weight - tattoo motifs
 const SYMBOLS = [
-    // Code brackets - larger
-    { text: '{/}', size: 0.8, weight: 2 },
-    { text: '</>', size: 0.8, weight: 2 },
-    { text: '{ }', size: 0.7, weight: 1 },
-    { text: '{ • }', size: 0.7, weight: 1 },
+    // Tattoo icons - larger
+    { text: '✦', size: 0.8, weight: 2 },
+    { text: '✧', size: 0.7, weight: 2 },
+    { text: '❖', size: 0.7, weight: 1 },
+    { text: '◈', size: 0.7, weight: 1 },
 
-    // Operators & punctuation - medium
-    { text: ';', size: 0.5, weight: 3 },
-    { text: '::', size: 0.4, weight: 2 },
-    { text: '=>', size: 0.5, weight: 2 },
-    { text: '//', size: 0.5, weight: 2 },
-    { text: '&&', size: 0.4, weight: 1 },
+    // Ink elements - medium
+    { text: '●', size: 0.4, weight: 3 },
+    { text: '○', size: 0.4, weight: 2 },
+    { text: '△', size: 0.5, weight: 2 },
+    { text: '▽', size: 0.5, weight: 2 },
+    { text: '◇', size: 0.4, weight: 2 },
 
-    // Binary - small scattered
-    { text: '0', size: 0.3, weight: 4 },
-    { text: '1', size: 0.3, weight: 4 },
-    { text: '01', size: 0.35, weight: 3 },
-    { text: '0101', size: 0.4, weight: 2 },
-    { text: '00', size: 0.35, weight: 2 },
+    // Decorative - small scattered
+    { text: '·', size: 0.3, weight: 4 },
+    { text: '•', size: 0.3, weight: 4 },
+    { text: '×', size: 0.35, weight: 3 },
+    { text: '+', size: 0.35, weight: 2 },
+    { text: '—', size: 0.3, weight: 2 },
 
-    // Arrows & misc
-    { text: '↑', size: 0.4, weight: 2 },
-    { text: '→', size: 0.4, weight: 1 },
-    { text: '←', size: 0.4, weight: 1 },
-    { text: '×', size: 0.3, weight: 2 },
-    { text: '•', size: 0.25, weight: 3 },
-    { text: '○', size: 0.3, weight: 2 },
+    // Stars & sparkles
+    { text: '★', size: 0.45, weight: 2 },
+    { text: '☆', size: 0.4, weight: 1 },
+    { text: '✶', size: 0.4, weight: 2 },
+    { text: '✴', size: 0.35, weight: 2 },
 
-    // Pixel-like patterns
-    { text: '▪▪\n▪', size: 0.25, weight: 2 },
-    { text: '▪ ▪\n ▪', size: 0.25, weight: 1 },
-    { text: '▪▪▪', size: 0.2, weight: 2 },
+    // Lines & dots
+    { text: '•••', size: 0.25, weight: 2 },
+    { text: '~', size: 0.3, weight: 2 },
+    { text: '≋', size: 0.3, weight: 1 },
+    { text: '◌', size: 0.3, weight: 2 },
 ];
 
 // Weighted random selection

@@ -149,20 +149,20 @@ const SegmentDoors = ({
     });
 
     // Wall Decorations
-    const whileTrueTexture = useTexture('/textures/corridor/decorations/while_true_loop.webp');
-    const coffeeTexture = useTexture('/textures/corridor/decorations/coffee_debug.webp');
-    const ideaTexture = useTexture('/textures/corridor/decorations/idea_process.webp');
+    const topArtTexture = useTexture('/textures/corridor/rysuneknaobraz1.webp');
+    const rightArtTexture = useTexture('/textures/corridor/rysuneknaobrazek3.webp');
+    const leftArtTexture = useTexture('/textures/corridor/rysuneknaobraz1.webp');
 
     return (
         <group position={[position[0], 0, position[2]]}>
-            {/* === LEFT WALL PANEL (Brainstorming) === */}
+            {/* === LEFT WALL PANEL (Tattoo Art) === */}
             <mesh position={[-(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
                 <meshBasicMaterial color="#e0e0e0" map={wallTexture} roughness={0.95} />
             </mesh>
-            {/* Decoration Left (Idea Process) */}
+            {/* Decoration Left */}
             {/* 
-                EDYCJA GRAFIKI LEWEJ (Idea):
+                EDYCJA GRAFIKI LEWEJ:
                 - rotation={[x, y, z]} -> Obrót (np. z = 0.1 to lekki przechył)
                 - args={[Szerokość, Wysokość]} -> Rozmiar
             */}
@@ -172,21 +172,21 @@ const SegmentDoors = ({
             >
                 <planeGeometry args={[1.2, 1.2 / 0.402]} />
                 <meshBasicMaterial color="#e0e0e0"
-                    map={ideaTexture}
+                    map={leftArtTexture}
                     transparent={true}
                     roughness={0.9}
                     alphaTest={0.1}
                 />
             </mesh>
 
-            {/* === RIGHT WALL PANEL (Coffee & Bug) === */}
+            {/* === RIGHT WALL PANEL (Tattoo Art) === */}
             <mesh position={[(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0]}>
                 <boxGeometry args={[sideWallWidth, corridorHeight, wallThickness]} />
                 <meshBasicMaterial color="#e0e0e0" map={wallTexture} roughness={0.95} />
             </mesh>
-            {/* Decoration Right (Coffee) */}
+            {/* Decoration Right */}
             {/* 
-                EDYCJA GRAFIKI PRAWEJ (Coffee):
+                EDYCJA GRAFIKI PRAWEJ:
             */}
             <mesh
                 position={[(doorOpeningWidth / 2 + sideWallWidth / 2), wallCenterY, 0.08]}
@@ -194,23 +194,23 @@ const SegmentDoors = ({
             >
                 <planeGeometry args={[2.2, 2.2 / 1.833]} />
                 <meshBasicMaterial color="#e0e0e0"
-                    map={coffeeTexture}
+                    map={rightArtTexture}
                     transparent={true}
                     roughness={0.9}
                     alphaTest={0.1}
                 />
             </mesh>
 
-            {/* === TOP WALL PANEL (While True) === */}
+            {/* === TOP WALL PANEL (Tattoo Art) === */}
             <mesh position={[0, topWallCenterY, 0]}>
                 <boxGeometry args={[doorOpeningWidth, topWallHeight, wallThickness]} />
                 <meshBasicMaterial color="#e0e0e0" map={wallTexture} roughness={0.95} />
             </mesh>
-            {/* Decoration Top (While True) */}
+            {/* Decoration Top */}
             <mesh position={[0, topWallCenterY, 0.07]}>
                 <planeGeometry args={[1.4, 1.4 / 1.833]} />
                 <meshBasicMaterial color="#e0e0e0"
-                    map={whileTrueTexture}
+                    map={topArtTexture}
                     transparent={true}
                     roughness={0.9}
                     alphaTest={0.1}

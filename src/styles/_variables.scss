@@ -1,17 +1,18 @@
 // =============================================================================
-// DESIGN TOKENS - ITom Portfolio
+// DESIGN TOKENS - Bolly Ink
 // =============================================================================
 
 // Colors
-$color-white: #FFFFFF;
-$color-black: #0A0A0A;
-$color-gray: #1A1A1A;
-$color-neon-green: #39FF14;
+$color-white: #F4EBD9; // Off-white, paper-like
+$color-black: #1A1A1A; // Soft black for tattoos
+$color-gray: #2D2A26; // Dark charcoal
+$color-accent: #D4A373; // Muted gold/leather ink tone
+$color-highlight: #C14A09; // Burnt orange, tattoo ink style
 
 // Typography
-$font-title: 'Gloria Hallelujah', cursive;
-$font-handwritten: 'Caveat', cursive;
-$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-title: 'Playfair Display', serif; // Classic, premium feel
+$font-handwritten: 'Dancing Script', cursive; // Personal touch
+$font-primary: 'Montserrat', sans-serif; // Modern, clean
 
 // Breakpoints
 $breakpoint-mobile: 480px;

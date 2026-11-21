@@ -8,7 +8,7 @@ import { usePerformance } from '../../../context/PerformanceContext';
  * Doodles Component - Hand-drawn Sketch Elements
  * 
  * WOW Effects for Awwwards SOTD:
- * - Sketchy paper elements (paper ball, airplane, pencil, coffee)
+ * - Sketchy paper elements (paper ball, airplane, tattoo machine, coffee)
  * - Floating animations with physics-like feel
  * - Consistent hand-drawn aesthetic
  * - (Interaction removed for performance)
@@ -22,7 +22,7 @@ const Doodles = () => {
     const textures = useTexture({
         paperBall: '/textures/corridor/decorations/paper_ball.webp',
         paperAirplane: '/textures/corridor/decorations/paper_airplane.webp',
-        pencil: '/textures/corridor/decorations/pencil.webp',
+        tattooMachine: '/textures/corridor/decorations/tattoo_machine.webp',
         coffeeCup: '/textures/corridor/decorations/coffee_cup.webp',
     });
 
@@ -43,7 +43,7 @@ const Doodles = () => {
                 floatAmount={0.04}
             />
 
-            {/* Paper Ball - BIGGER, lower left near creative developer */}
+            {/* Paper Ball - BIGGER, lower left near tattoo station */}
             <SketchElement
                 texture={textures.paperBall}
                 position={[-0.9, -0.7, 0.4]}
@@ -63,9 +63,9 @@ const Doodles = () => {
                 floatAmount={0.03}
             />
 
-            {/* Pencil - BIGGER, under creative developer */}
+            {/* Tattoo machine - BIGGER, under tattoo station */}
             <SketchElement
-                texture={textures.pencil}
+                texture={textures.tattooMachine}
                 position={[0.7, -0.8, 0.5]}
                 scale={0.5}
                 rotationSpeed={0.1}
@@ -297,9 +297,9 @@ const ThoughtBubble = ({ position }) => {
                 <meshBasicMaterial color="#333" />
             </mesh>
 
-            {/* Content inside bubble - code icon */}
+            {/* Content inside bubble - tattoo machine icon (simulated) */}
             <mesh ref={contentRef} position={[0, 0, 0.01]}>
-                <planeGeometry args={[0.05, 0.06]} />
+                <planeGeometry args={[0.06, 0.08]} />
                 <meshBasicMaterial color="#111111" transparent opacity={0.9} />
             </mesh>
         </group>

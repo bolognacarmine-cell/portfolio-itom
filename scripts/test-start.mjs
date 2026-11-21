@@ -83,9 +83,9 @@ test('all destinations are present in HTML, and the portfolio appears once', () 
   assert.equal(anchors.filter(match => /data-pending/.test(match[1])).length, 8);
   const urls = anchors.map(match => match[1].match(/href="(https:[^"]+)"/)?.[1]).filter(Boolean);
   assert.deepEqual(urls, [
-    'https://www.facebook.com/people/ITom/61586563487664/',
-    'https://github.com/ITomPoland',
-    'https://www.instagram.com/itom.dev/',
+    'https://www.facebook.com/people/Bolly Ink/61586563487664/',
+    'https://github.com/BollyInk',
+    'https://www.instagram.com/bolly.ink/',
     'https://www.linkedin.com/in/tomasz-szmajda-259337305/',
   ]);
   assert.match(html, /aria-label="Interactive Portfolio"/);

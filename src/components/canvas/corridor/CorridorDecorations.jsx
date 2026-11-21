@@ -373,20 +373,24 @@ const CorridorDecorations = ({ segmentLength, zOffset, corridorWidth = 4, corrid
     // - y: pozycja Y (wysokość na ścianie, 0 = środek)
     const frames = useMemo(() => [
         {
-            z: zOffset - 10,         // Między startem a Gallery (relZ -5 do -15)
+            z: zOffset - 10,
             side: 'right',
-            width: 2.5,              // Szerokość ramki
-            height: 2.5 / 1.785,     // Legacy ratio 3200x1792
-            y: 0.3,                  // Wysokość na ścianie
+            width: 2.5,
+            height: 2.5 / 1.785,
+            y: 0.3,
             id: 'frame-1',
-            // Custom setup for "rysuneknaobraz1.png"
             image: '/textures/corridor/rysuneknaobraz1.webp',
-            imageWidth: 1.1,
+            imageWidth: 1.2,
             imageHeight: 1.1,
-            offsetFromWall: 0.1, // Przesunięcie bliżej środka korytarza (0.1 unit)
+            offsetFromWall: 0.1,
+            signature: "Custom Flash Art",
+            signatureX: 0,
+            signatureY: -0.55,
+            signatureSize: 0.1,
+            signatureColor: '#333333'
         },
         {
-            z: zOffset - 25,         // Między Gallery a Studio (relZ -20 do -30)
+            z: zOffset - 25,
             side: 'left',
             width: 2.5,
             height: 2.5 / 1.785,
@@ -395,32 +399,37 @@ const CorridorDecorations = ({ segmentLength, zOffset, corridorWidth = 4, corrid
             image: '/textures/corridor/rysuneknaobrazek3.webp',
             imageWidth: 1.7,
             imageHeight: 1,
-            offsetFromWall: 0.1
+            offsetFromWall: 0.1,
+            signature: "Blackwork Design",
+            signatureX: 0,
+            signatureY: -0.55,
+            signatureSize: 0.1,
+            signatureColor: '#333333'
         },
         {
-            z: zOffset - 40,         // Między Studio a About (relZ -34 do -46)
+            z: zOffset - 40,
             side: 'right',
             width: 2.5,
             height: 2.5 / 1.785,
             y: 0.25,
             id: 'frame-3',
-            signature: "Empty canvas!\nWant your art here?\nContact me!",
+            signature: "Your story,\ninked forever.\nBolly Ink",
             signatureX: 0,
             signatureY: 0,
-            signatureSize: 0.12,
+            signatureSize: 0.13,
             signatureColor: '#333333'
         },
         {
-            z: zOffset - 55,         // Między About a Connect (relZ -50 do -60)
+            z: zOffset - 55,
             side: 'left',
             width: 2.5,
             height: 2.5 / 1.785,
             y: 0.35,
             id: 'frame-4',
-            signature: "Empty canvas!\nWant your art here?\nContact me!",
+            signature: "Book your\nsession today.\nChristian",
             signatureX: 0,
             signatureY: 0,
-            signatureSize: 0.12,
+            signatureSize: 0.13,
             signatureColor: '#333333'
         },
     ], [zOffset]);

@@ -331,7 +331,7 @@ const NavigationUI = () => {
                         </div>
                         <div className="map-container">
                             {/* Map background image */}
-                            <img src="/images/map.webp" alt="Portfolio Map" className="map-image" />
+                            <img src="/images/map.webp" alt="Bolly Ink Map" className="map-image" />
 
                             {/* Painted Map Overlays */}
                             <img ref={paintedMapsRefs.about} src="/images/map_about_painted.webp" alt="" className="painted-map-layer" style={{ clipPath: 'polygon(10% 20%, 10% 20%, 10% 55%, 10% 55%)' }} />
