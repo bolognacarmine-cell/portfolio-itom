@@ -160,3 +160,32 @@ button {
     font: inherit;
     color: inherit;
 }
+// Custom cursor
+html.has-custom-cursor {
+    cursor: none !important;
+
+    * {
+        cursor: none !important;
+    }
+
+    input,
+    textarea,
+    [contenteditable] {
+        cursor: auto !important;
+    }
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 63px;
+    height: 63px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform;
+}
